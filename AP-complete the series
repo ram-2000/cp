@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+int main()
+{
+    ll t,a,b,c,k,n,d;
+    cin>>t;
+    while(t--)
+    {
+        cin>>a>>b>>c;
+        n=(2*c)/(a+b);
+        d=(b-a)/(n-5);
+        k=a-(2*d);
+        cout<<n<<"\n";
+        for(ll i=1;i<=n;i++)
+            cout<<k+((i-1)*d)<<" ";
+        cout<<"\n";
+    }
+}
