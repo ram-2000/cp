@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+  int t,a,b;
+  cin>>t;
+  string s1="abcdefghijklmnopqrstuvwxyz";
+  string s2;
+  vector <char> v1 ;
+  vector <char> v2 ;
+  while(t--)
+  {
+      cin>>a>>b;
+      cin>>s2;
+      for(int i=0;i<a;i++)
+      {
+          v1.push_back(s1[i]);
+      }
+      for(int i=0;i<s2.length();i++)
+      {
+          v2.push_back(s2[i]);
+      }
+      for(int i=0;i<v2.size();i++)
+      {
+          for(int j=0;j<v1.size();j++)
+          {
+              if(v2[i]==v1[j])
+              {
+                  v1.erase(v1.begin()+(j));
+                  j=v1.size();
+                  
+              }
+          }
+      }
+      for(int i=0;i<b;i++)
+      {
+          for(int j=0;j<v1.size();j++)
+          {
+              cout<<v1[j];
+          }
+          
+      }
+      v1.clear();
+      v2.clear();
+      cout<<"\n";
+  }
+}
