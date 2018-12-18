@@ -1,0 +1,7 @@
+k=int(input())
+if k>0 :   #may be quadrant 1 or 4.
+    m=int(input())
+    print(1) if m>0 else print(4)
+else :  #it is quadrant 2 and 3
+    m=int(input())
+    print(2) if m>0 else print(3)
